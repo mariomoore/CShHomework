@@ -10,6 +10,19 @@ namespace CShHomework
     {
         static void Main(string[] args)
         {
+            Ankietor ankietor = new Ankietor();
+            ankietor.Run();
+
+            Console.WriteLine("Koniec ankiety. Naciśnij klawisz...");
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("Podaj nazwę nowej ankiety:");
+            Ankietor ankietor2 = new Ankietor(Console.ReadLine());
+            ankietor2.Run();
+
+            Console.WriteLine("Koniec programu. Naciśnij klawisz...");
+            Console.ReadKey();
         }
     }
 }
