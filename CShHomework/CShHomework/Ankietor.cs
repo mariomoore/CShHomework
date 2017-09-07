@@ -15,7 +15,7 @@ namespace CShHomework
         private string[] questions = { "Jaki jest Twój ulubiony system operacyjny lub dystrybucja?",
                                      "Jaki jest Twoj ulubiony język programowania/skryptowy/znaczników?",
                                      "Jak nazywa się Twoje ulubione środowisko programistyczne?",
-                                     "Jak oceniasz swoje umiejętności programowania w C# w skali 1-5?",
+                                     "Jak oceniasz swoje umiejętności programowania w C# w skali 0-5?",
                                      "Jaki nowy język programowania chciałbyś poznać?" };
         private string[] answers;
         private int[] questionsOrder;
@@ -25,16 +25,20 @@ namespace CShHomework
         public Ankietor(int allQuestions = 5, int questions = 3)
         {
             surveyName = null;
-            this.allQuestions = allQuestions;
-            questionsToAsk = questions;
-            answers = new string[questions];
-            questionsOrder = new int[allQuestions];
-            setQuestionsOrder();
+            commonInit(allQuestions, questions);
         }
 
         public Ankietor(string surveyName, int allQuestions = 5, int questions = 3)
         {
             this.surveyName = surveyName;
+            commonInit(allQuestions, questions);
+        }
+
+        private void commonInit(int allQuestions, int questions)
+        {
+            if (allQuestions > this.questions.Length) allQuestions = this.questions.Length;
+            if (questions > allQuestions) questions = allQuestions;
+
             this.allQuestions = allQuestions;
             questionsToAsk = questions;
             answers = new string[questions];
@@ -60,7 +64,7 @@ namespace CShHomework
 
                 randomQuestionsOrder();
 
-                for (int i = 0; i < 3; i++)
+                for (int i = 0; i < questionsToAsk; i++)
                 {
                     Console.WriteLine("Pytanie " + (i + 1));
                     Console.WriteLine(questions[questionsOrder[i]]);
@@ -90,7 +94,7 @@ namespace CShHomework
                 Console.WriteLine("Wyniki ankiety o nazwie: " + surveyName + ".");
             }
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < questionsToAsk; i++)
             {
                 Console.WriteLine("Pytanie " + (i + 1));
                 Console.WriteLine(answers[i].Substring(0, answers[i].IndexOf(":")));
@@ -98,7 +102,7 @@ namespace CShHomework
             }
         }
 
-        public void randomQuestionsOrder()
+        private void randomQuestionsOrder()
         {
             for(int i = 0; i < questionsToAsk; i++)
             {
