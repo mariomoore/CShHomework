@@ -18,3 +18,6 @@ Ankietor ankietor = new Ankietor(); ankietor.Run();
 __________________________________________________________________________________________________________________________________________
 Branch - SumaLosowych:
 Wypełnijcie tablice randomowymi liczbami (1000sztuk) a następnie wylosujcie 50 z nich i zapiszcie do drugiej tablicy. Z tej drugiej tablicy wyszukajcie liczby parzyste i dodajcie je do siebie. Na końcu program powinien pokazać sumę tych znalezionych liczb.
+__________________________________________________________________________________________________________________________________________
+Branch - NaDuze:
+Macie dużą ilość tekstu dostarczoną w jednej zmiennej (zapiszcie sobie jakies "Lorem impsum" do zmiennej string). Proszę podzielić ten string tak zeby kazde słowo było oddzielnie zapisane w tablicy (metoda Split). sprawdzić potem tablice które słowo zawiera parzystą liczbe liter i zamienic litery na duże (metoda ToUpper()). Na końcu wyswietlic cała tablice.
