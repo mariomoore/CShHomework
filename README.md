@@ -24,3 +24,6 @@ Macie dużą ilość tekstu dostarczoną w jednej zmiennej (zapiszcie sobie jaki
 __________________________________________________________________________________________________________________________________________
 Branch - Wyjatek:
 Użytkownik wprowadza jakiś tekst do zmiennej. Jeżeli wprowadzi więcej niż 50 znaków. wyrzucamy wyjątek. Następnie wyjątek musimy przejąć w catch i tak przyciąć tekst, żeby zajął tylko 50 znaków. Trzeba o tym fakcie tez poinformować użytkownika, że jego wiadomość został obcięta oraz wyświetlić ją na końcu. Wyjątek muście stworzyć sami. Oczywiście ma dziedziczyć po Exception.
+__________________________________________________________________________________________________________________________________________
+Branch - Interface:
+Zdefiniuj interfejs IOsoba. Powinien on nakazywać implementację właściwości Nazwa oraz metody Opisz. Następnie stwórz klasę Student dziedziczącą po tym interfejsie i implementującą go. Stwórz kilka egzemplarzy tej klasy, dodaj je do listy ArrayList i posortuj alfabetycznie (korzystając z wbudowanych metod klasy ArrayList).
