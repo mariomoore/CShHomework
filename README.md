@@ -21,3 +21,6 @@ Wypełnijcie tablice randomowymi liczbami (1000sztuk) a następnie wylosujcie 50
 __________________________________________________________________________________________________________________________________________
 Branch - NaDuze:
 Macie dużą ilość tekstu dostarczoną w jednej zmiennej (zapiszcie sobie jakies "Lorem impsum" do zmiennej string). Proszę podzielić ten string tak zeby kazde słowo było oddzielnie zapisane w tablicy (metoda Split). sprawdzić potem tablice które słowo zawiera parzystą liczbe liter i zamienic litery na duże (metoda ToUpper()). Na końcu wyswietlic cała tablice.
+__________________________________________________________________________________________________________________________________________
+Branch - Wyjatek:
+Użytkownik wprowadza jakiś tekst do zmiennej. Jeżeli wprowadzi więcej niż 50 znaków. wyrzucamy wyjątek. Następnie wyjątek musimy przejąć w catch i tak przyciąć tekst, żeby zajął tylko 50 znaków. Trzeba o tym fakcie tez poinformować użytkownika, że jego wiadomość został obcięta oraz wyświetlić ją na końcu. Wyjątek muście stworzyć sami. Oczywiście ma dziedziczyć po Exception.
